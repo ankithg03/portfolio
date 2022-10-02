@@ -8,6 +8,7 @@ import editor from "../../Assets/Projects/ssl.png";
 import chatify from "../../Assets/Projects/og.png";
 import suicide from "../../Assets/Projects/ecom.png";
 import bitsOfCode from "../../Assets/Projects/catalog.png";
+import oldPortfolio from "../../Assets/oldPortfolio.png";
 
 function Projects() {
   return (
@@ -80,7 +81,16 @@ function Projects() {
               isBlog={false}
               title="Game"
               description="Simple JavaScript Based Game."
-              demoLink="https://codilar-coder.herokuapp.com/game.html/"
+              demoLink="https://codilar-coder.herokuapp.com/game.html"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+                imgPath={oldPortfolio}
+                isBlog={false}
+                title="OLD Portfolio"
+                description="Simple Portfolio."
+                demoLink="https://codilar-coder.herokuapp.com/"
             />
           </Col>
         </Row>
