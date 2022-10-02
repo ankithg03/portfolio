@@ -19,37 +19,88 @@ function Home2() {
               LET ME <span className="yellow"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
+              I'm Ankith G, also known as Ank, A Software Developer who thinks programming language is just a way to communicate with the device, regardless of any programming language it can be, what do you think about it?
               <br />
-              <br />I am fluent in classics like
-              <i>
-                <b className="yellow"> C++, Javascript and Python. </b>
-              </i>
-              <br />
-              <br />
-              My field of Interest's are building new &nbsp;
-              <i>
-                <b className="yellow">Web Technologies and Products </b> and
-                also in areas related to{" "}
-                <b className="yellow">
-                  Deep Learning and Natural Launguage Processing.
-                </b>
-              </i>
-              <br />
-              <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="yellow">Node.js</b> and
-              <i>
-                <b className="yellow">
-                  {" "}
-                  Modern Javascript Library and Frameworks
-                </b>
-              </i>
-              &nbsp; like
-              <i>
-                <b className="yellow"> React.js and Next.js</b>
-              </i>
+              <h3 id="-img-src-https-media-giphy-com-media-vgcdazckvsr6om0uwg-giphy-gif-width-50-a-little-more-about-me-"><img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="50" />{'A little more about me...'}</h3>
+              <pre className={'home-code'}>
+              <code className="lang-javascript">
+                const aboutMe = {"{"}
+                {"\n"}
+                <span className="hljs-symbol">{"   "}pronouns:</span>{" "}
+                <span className="hljs-string">"he"</span> |{" "}
+                <span className="hljs-string">"him"</span>,{"\n"}
+                <span className="hljs-symbol">{"   "}code:</span> [Php, Javascript,
+                KnockoutJS, HTML, CSS, Python, Java, CSharp, Swift, Scss, Less, ],{"\n"}
+                <span className="hljs-symbol">{"   "}technologies:</span> {"{"}
+                {"\n"}
+                <span className="hljs-symbol">{"      "}frontEnd:</span> {"{"}
+                {"\n"}
+                <span className="hljs-symbol">{"         "}js:</span> [
+                <span className="hljs-string">"React"</span>,{" "}
+                <span className="hljs-string">"NextJS"</span>,{" "}
+                <span className="hljs-string">"Angular"</span>],{"\n"}
+                <span className="hljs-symbol">{"         "}css:</span> [
+                <span className="hljs-string">"Bulma"</span>,{" "}
+                <span className="hljs-string">"Bootstrap"</span>,{" "}
+                <span className="hljs-string">"Material Design"</span>,{" "}
+                <span className="hljs-string">"Semantic UI"</span>]{"\n"}
+                {"      "}
+                {"}"},{"\n"}
+                <span className="hljs-symbol">{"      "}backEnd:</span> {"{"}
+                {"\n"}
+                <span className="hljs-symbol">{"         "}java:</span> [
+                <span className="hljs-string">"Spring"</span>],{"\n"}
+                <span className="hljs-symbol">{"         "}js:</span> [
+                <span className="hljs-string">"Node"</span>],{"\n"}
+                <span className="hljs-symbol">{"         "}csharp:</span> [
+                <span className="hljs-string">"Asp.net Core"</span>],{"\n"}
+                <span className="hljs-symbol">{"         "}misc:</span> [
+                <span className="hljs-string">"Bash"</span>,{" "}
+                <span className="hljs-string">"Puppeteer"</span>,{" "}
+                <span className="hljs-string">"Cypress"</span>],{"\n"}
+                <span className="hljs-symbol">{"         "}php:</span> [
+                <span className="hljs-string">"Magento"</span>,{" "}
+                <span className="hljs-string">"Symfony"</span>,{" "}
+                <span className="hljs-string">"Laravel"</span>],{"\n"}
+                <span className="hljs-symbol">{"         "}python:</span> [
+                <span className="hljs-string">"Django"</span>,{" "}
+                <span className="hljs-string">"flask"</span>]{"\n"}
+                {"      "}
+                {"}"},{"\n"}
+                <span className="hljs-symbol">{"      "}api:</span> [
+                <span className="hljs-string">"Rest"</span>,{" "}
+                <span className="hljs-string">"GraphQl"</span>]{"\n"}
+                <span className="hljs-symbol">{"      "}databases:</span> [
+                <span className="hljs-string">"MongoDB"</span>,{" "}
+                <span className="hljs-string">"mySQL"</span>,{" "}
+                <span className="hljs-string">"SQLServer"</span>,{" "}
+                <span className="hljs-string">"SQLite"</span>],{"\n"}
+                <span className="hljs-symbol">{"      "}mobile:</span> [
+                <span className="hljs-string">"Android"</span>]{"\n"}
+                <span className="hljs-symbol">{"      "}products:</span> [
+                <span className="hljs-string">"AEM"</span>,{" "}
+                <span className="hljs-string">"ScandiPWA"</span>,{" "}
+                <span className="hljs-string">"Magento PWA"</span>,{" "}
+                <span className="hljs-string">"NexPWA"</span>,{" "}
+                <span className="hljs-string">"Adobe Commerce"</span>]{"\n"}
+                {"   "}
+                {"}"},{"\n"}
+                <span className="hljs-symbol">{"   "}currentOccupation:</span> [
+                <span className="hljs-string">
+                  "A Software Developer who aspire to be a stable version but end up to be a
+                  beta version"
+                </span>
+                ],{"\n"}
+                <span className="hljs-symbol">{"   "}challenge:</span>{" "}
+                <span className="hljs-string">
+                  "A developer who wants to have knowledge to help others through
+                  programming."
+                </span>
+                ,{"\n"}
+                {"}"};{"\n"}
+              </code>
+            </pre>
+
             </p>
           </Col>
           <Col md={4} className="myAvtar">

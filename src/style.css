@@ -745,3 +745,8 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
+.home-code {
+  background: black;
+  padding: 10px;
+  border-radius: 1rem;
+}
