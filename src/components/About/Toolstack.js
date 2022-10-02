@@ -16,8 +16,7 @@ import {
     SiJira,
     SiCodepen,
     SiCodesandbox,
-    SiVisualstudio, SiApache, SiValve, SiUbuntu, SiMysql, SiEtcd
-
+    SiVisualstudio, SiApache, SiUbuntu, SiMysql
 } from "react-icons/si";
 import {DiEclipse} from "react-icons/di";
 
