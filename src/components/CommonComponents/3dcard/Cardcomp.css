@@ -35,10 +35,11 @@
   /* background-size: 300%; */
 }
 
-/* @media (max-width:600px) {.card {
-  background-size: 450%;
+@media (max-width:600px) {
+  .card {
+    background-size: contain;
+  }
 }
-} */
 
 .card-shine {
   position: absolute;
