@@ -5,7 +5,7 @@ import { AiOutlineDownload } from "react-icons/ai";
 // @ts-ignore
 import { Document, Page, pdfjs } from "react-pdf";
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
-
+// @ts-ignore
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import './ResumeComponent.css'
 // import pdf from '../../../public/images/Assets/Ankith.pdf'
