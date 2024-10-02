@@ -6,7 +6,7 @@ const Photo = () => {
     <>
       {/* Section 3 My Photo */}
       <section
-        className="section3 w-full h-screen relative flex items-center justify-center mb-20"
+        className="section3 w-full h-screen relative flex items-center justify-center mb-20 overflow-x-hidden	"
         data-cursor-text="Move The Mouse"
         data-cursor-size={100}
       >

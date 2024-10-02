@@ -1,5 +1,9 @@
 .resume-section {
     color: white;
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 
 }
 .resume-download a {

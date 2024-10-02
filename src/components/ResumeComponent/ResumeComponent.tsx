@@ -53,7 +53,7 @@ const ResumeComponent = ({ isMobile }: { isMobile: boolean }) => {
     };
 
     return (
-        <div>
+        <div className="flex w-full">
             <div className="resume-section">
                 <div className="resume-download" style={{ justifyContent: "center", position: "relative" }}>
                     <a

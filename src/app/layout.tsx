@@ -1,3 +1,4 @@
+import { HeaderComponent } from "@/components/HeaderComponent";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -39,7 +40,10 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#00aba9" />
         <meta name="theme-color" content="#000000" />
       </head>
-      <body className={inter.className + " select-none"}>{children}</body>
+      <body className={inter.className + " select-none"}>
+        <HeaderComponent />
+        {children}
+        </body>
     </html>
   );
 }

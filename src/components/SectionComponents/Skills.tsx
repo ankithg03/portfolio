@@ -6,7 +6,7 @@ const Skills = () => {
     <>
       {/* Section 4 Skills */}
       <section
-        className="section4 w-full h-screen relative flex flex-col justify-center font-sans font-semibold md:font-bold text-[9vh] md:text-[15vh]"
+        className="section4 w-full h-screen relative flex flex-col justify-center font-sans font-semibold md:font-bold text-[9vh] md:text-[15vh] overflow-x-hidden"
         data-cursor-text="Double Click"
         data-cursor-size={70}
       >

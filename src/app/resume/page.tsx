@@ -40,7 +40,7 @@ export default function ResumePage() {
   });
 
   return (
-    <>
+    <div className="flex w-ful overflow-x-hidden">
       {isLoading ? (
         isMobile ? (
           <Cursor
@@ -70,6 +70,6 @@ export default function ResumePage() {
           <ResumeComponent isMobile />
         </ReactLenis>
       </ParallaxProvider>
-    </>
+    </div>
   );
 }

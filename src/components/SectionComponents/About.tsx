@@ -21,7 +21,7 @@ const About = ({isMobile}:{isMobile:boolean}) => {
     <>
       {/* Section 2 About */}
       {/* In the Realm of Pixels and Logic */}
-      <section className="section2 w-full min-h-screen flex items-center justify-center relative tracking-widest overflow-x-hidden overflow-y-hidden">
+      <section id="about" className="section2 w-full min-h-screen flex items-center justify-center relative tracking-widest overflow-x-hidden overflow-y-hidden">
         <motion.div
           whileInView={{ opacity: 1, letterSpacing: "0px" }}
           initial={{ opacity: 0, letterSpacing: "50px" }}

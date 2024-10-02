@@ -7,7 +7,7 @@ const Landing = () => {
   return (
     <>
       {/* Section 1 Ankith G */}
-      <section className="section1 w-full h-screen flex items-center flex-col -gap-5 justify-center relative">
+      <section className="section1 w-full h-screen flex items-center flex-col -gap-5 justify-center relative banner-hero">
         <Bg />
         <div className="ScrollDown absolute bottom-32 md:bottom-16 ">
           <Parallax speed={6}>

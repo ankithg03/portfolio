@@ -87,7 +87,7 @@ const Projects = () => {
     <>
       {/* Section 4 Projects */}
       <section
-        className="section5 w-full h-[300vh] text-white duration-200"
+        className="section5 w-full h-[300vh] text-white duration-200 overflow-x-hidden"
         ref={container}
       >
         <div className="sticky w-screen h-screen top-0 overflow-hidden flex items-center justify-center">

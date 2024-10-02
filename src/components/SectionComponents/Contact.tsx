@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <>
       {/* Section 5 */}
-      <section className="section6 w-full h-screen flex items-center justify-center flex-col-reverse md:flex-row gap-3 md:gap-10">
+      <section id="contact" className="section6 w-full h-screen flex items-center justify-center flex-col-reverse md:flex-row gap-3 md:gap-10 overflow-x-hidden">
         <motion.div
           initial={{ translateY: 50 }}
           whileInView={{ translateY: 0 }}

@@ -1,0 +1,12 @@
+.nav-bg {
+    border-radius: 11px;
+    background: #3b3b3b4d;
+}
+.logo-ank {
+    color: #ffe100;
+}
+header {
+    z-index: 99;
+    width: calc(100%);
+    background: #000000f5;
+}

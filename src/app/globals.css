@@ -68,6 +68,7 @@ html.has-scroll-smooth {
 
 html.lenis {
   height: auto;
+  overflow-x: hidden;
 }
 
 .lenis.lenis-smooth {
@@ -90,7 +91,19 @@ html.lenis {
 
 
 
+.banner-hero {
+  background: url('/images/ankith.jpg');
+  background-position: 1800px;
+  @media (min-width: 640px){
+    background-position: top;
+  }
+  overflow-x: hidden;
+}
 
+.banner-text, .ankith-text {
+  color: #ffffff;
+  -webkit-text-stroke: 1px black;
+}
 
 /* Scroll Down */
 
