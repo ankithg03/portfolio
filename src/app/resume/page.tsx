@@ -67,7 +67,7 @@ export default function ResumePage() {
             smoothTouch: true,
           }}
         >
-          <ResumeComponent />
+          <ResumeComponent isMobile />
         </ReactLenis>
       </ParallaxProvider>
     </>

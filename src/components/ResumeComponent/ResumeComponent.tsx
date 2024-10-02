@@ -15,18 +15,32 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 const resumeLink = "/images/Assets/Ankith.pdf"; // Direct link to the PDF
 
-const ResumeComponent: React.FC = () => {
+const ResumeComponent = ({ isMobile }: { isMobile: boolean }) => {
     const [width, setWidth] = useState<number>(1200);
+    const [isLoading, setIsLoading] = useState(false);
+
+    function delay(ms: number) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+    
+    
     const [numPages, setNumPages] = useState<number | null>(null);
     const [error, setError] = useState<string | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
 
-    useEffect(() => {
-        const handleResize = () => setWidth(window.innerWidth);
-        window.addEventListener("resize", handleResize);
+    // useEffect(() => {
+    //     const handleResize = () => setWidth(window.innerWidth);
+    //     window.addEventListener("resize", handleResize);
         
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
+    //     return () => window.removeEventListener("resize", handleResize);
+    // }, []);
+    useEffect(()=>{
+
+        if (isMobile) {
+            setWidth(window.innerWidth - 30)
+        }
+    },[isMobile]
+    )
 
     const onLoadSuccess = (pdf: any) => {
         setNumPages(pdf.numPages);
