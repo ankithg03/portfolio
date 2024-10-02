@@ -31,11 +31,15 @@ export default function Header() {
       { opacity: 0, x: -20 },
       { opacity: 1, x: 0, duration: 0.8, delay: 0.2, ease: 'power3.out' }
     )
-
-    gsap.fromTo(navLinks.children,
-      { opacity: 0, y: -20 },
-      { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, delay: 0.5, ease: 'power3.out' }
-    )
+    // @ts-ignore
+    if (typeof navLinks?.children !== 'undefined') {
+       // @ts-ignore
+      gsap.fromTo(navLinks?.children,
+        { opacity: 0, y: -20 },
+        { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, delay: 0.5, ease: 'power3.out' }
+      )
+    }
+    
 
     // Background animation
     gsap.to(bgAnimation, {
@@ -45,7 +49,8 @@ export default function Header() {
       ease: 'none',
     })
 
-    // Hover animations for nav links
+    // Hover animations for nav links 
+    // @ts-ignore
     navLinks?.childNodes?.forEach((link) => {
       link.addEventListener('mouseenter', () => {
         gsap.to(link, { scale: 1.1, duration: 0.3, ease: 'power2.out' })
