@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { AiOutlineDownload } from "react-icons/ai";
+// @ts-ignore
 import { Document, Page, pdfjs } from "react-pdf";
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 
