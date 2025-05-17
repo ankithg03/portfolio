@@ -6,6 +6,8 @@ import { ParallaxBannerLayer, ParallaxProvider } from "react-scroll-parallax";
 
 import { ReactLenis } from "@studio-freight/react-lenis";
 import ProjectBanner from "@/components/ProjectBanner";
+import s from '@/components/ProjectCard/ProjectCard.module.scss'
+import clsx from "clsx";
 
 const projects = [{
   name: "Ank Music",
@@ -31,7 +33,7 @@ const projects = [{
   name: "Quiz",
   description: "A simple Quiz App",
   image: '/images/projectImages/quiz.gif',
-  link: "https://quiz-ankithg.vercel.app/",
+  link: "https://ankithg-quiz.vercel.app/",
   stack: ["NextJs", "NodeJS"],
 },
 {
@@ -67,7 +69,7 @@ const Projects = () => {
             }
           >
             <ProjectBanner />
-            <div className="container mx-auto py-8 px-4">
+            <div className={clsx("container mx-auto py-8 px-4", s['project-container '])}>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {projects.map((project, index) => (
                   <ProjectCard key={index} project={project} />
