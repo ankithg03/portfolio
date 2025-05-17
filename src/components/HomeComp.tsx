@@ -9,9 +9,14 @@ import About from "./SectionComponents/About";
 import Projects from "./SectionComponents/Projects";
 import Contact from "./SectionComponents/Contact";
 type HomeType = { isMobile: boolean }
+import Vimeo from '@u-wave/react-vimeo';
+
 const HomeComp: React.FC<HomeType> = ({ isMobile }:HomeType ): JSX.Element => {
   const [loading, setLoading] = useState(true);
   const [loadingAnimation, setLoadingAnimation] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const videoRef = useRef<any>(null);
 
   function delay(ms: number) {
     return new Promise((resolve) => setTimeout(resolve, ms));
@@ -26,6 +31,15 @@ const HomeComp: React.FC<HomeType> = ({ isMobile }:HomeType ): JSX.Element => {
   useEffect(() => {
     runLoading();
   }, []);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      console.log('aaa', videoRef.current, videoRef.current.play)
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
   return (
     <main
       className={
@@ -36,8 +50,26 @@ const HomeComp: React.FC<HomeType> = ({ isMobile }:HomeType ): JSX.Element => {
     >
       <Loading loading={loading} loadingAnimation={loadingAnimation} />
       <Landing />
-      <About isMobile={isMobile} />
       <Photo />
+      <About isMobile={isMobile} />
+      <section
+        className="w-full	"
+        data-cursor-text="Move The Mouse"
+        data-cursor-size={100}
+      >
+        <Vimeo
+          ref={videoRef}
+          video="1085323471"
+          autoplay={isPlaying}
+          responsive
+          transparent
+          showTitle={false}
+          showPortrait={false}
+          background={false}
+          muted={false}
+          controls={true}
+        />
+      </section>
       <Projects/>
       
 
