@@ -138,10 +138,10 @@ const Projects = () => {
                       translateY: useTransform(
                         scrollYProgress,
                         [0, 0.85, 1],
-                        [-150, -150, 0]
+                        [-150, -120, 0]
                       ),
                     }}
-                    className="heading absolute text-[1.5vw] text-center md:text-[1.3vw] lg:text-[.7vw] font-bold text-black/30 w-full h-full flex items-center justify-center gap-1 flex-col"
+                    className="pt-8 heading absolute text-[1.5vw] text-center md:text-[1.3vw] lg:text-[.7vw] font-bold text-black/30 w-full h-full flex items-center justify-center gap-1 flex-col"
                   >
                     <div className="">Let{"'"}s Collaborate</div>
                     <motion.div className="profile w-[90%] md:w-[50%] h-[60%] bg-black/80 rounded-sm overflow-hidden text-white flex text-[.9vw] md:text-[.3vw] text-left font-FiraCode font-light items-center">

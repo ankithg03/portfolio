@@ -1,6 +1,44 @@
 .nav-bg {
-    border-radius: 11px;
-    background: #3b3b3b4d;
+    border-radius: 7px;
+    background: #ffffff38;
+    a {
+            text-decoration: none;
+            position: relative;
+            font-weight: 600;
+            transition: all 0.3s;
+            @apply font-PPMori
+        }
+                
+        a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            @apply bg-slate-300;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        
+        a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        
+        a:not(:hover)::after {
+            transform-origin: right;
+            transition: transform 0.7s ease;
+        }
+        .logo-ank {
+             &::after {
+                margin-top: 5px;
+                bottom: -6px;
+                left: 2px;
+                transition: width 0.6s;
+            }
+        }
 }
 .logo-ank {
     color: #ffe100;

@@ -6,7 +6,7 @@ const Loading = ({
 }: {
   loading: boolean;
   loadingAnimation: boolean;
-}) => {
+}): JSX.Element => {
   return (
     <>
       {/* Loading */}

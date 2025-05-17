@@ -1,18 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+/* src/app/globals.css */
+@font-face {
+  font-family: 'PPMori';
+  src: url('/font/PPMori.otf') format('opentype'), 
+       url('/font/PPMori-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
+/* Other global styles... */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+ :root {
+        }
 
 :root {
+              --primary: #2A2356;
+
   --secondary: #1e1e20;
   --secondary2: #252529;
   --main: #dfdfd7;
   --main2: #dfdfd7;
   --button: #747bff;
+    --accent: #E45858;
+  --light: #FFFFFE;
+  --dark: #0F0E17;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -92,17 +109,22 @@ html.lenis {
 
 
 .banner-hero {
-  background: url('/images/ankith.jpg');
+  background: url('/images/home-banner-mobile.png');
   background-position: 1800px;
+  background-size: cover;
   @media (min-width: 640px){
     background-position: top;
+    background: url('/images/home-banner.jpg');
+    background-size: cover;
   }
   overflow-x: hidden;
 }
 
 .banner-text, .ankith-text {
   color: #ffffff;
-  -webkit-text-stroke: 1px black;
+  @apply mb-36 md:mb-0;
+  text-shadow: 1px 1px 11px #0000005c;
+  width: 100%;
 }
 
 /* Scroll Down */
@@ -139,3 +161,9 @@ html.lenis {
     transform: translateY(24px);
   }
 }
+nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        

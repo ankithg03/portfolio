@@ -6,6 +6,7 @@ import { gsap } from 'gsap'
 import './HeaderComponent.css'
 import { FiAlignJustify } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
+import Image from 'next/image'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -93,15 +94,16 @@ export default function Header() {
     <header ref={headerRef} className="fixed from-gray-900 to-gray-800 text-gray-100 shadow-md overflow-hidden md:w-full ">
       <div className="container mx-auto px-4 py-4 relative z-10 ">
         <nav className="flex justify-between items-center p-2 nav-bg">
-          <Link href="/" ref={logoRef} className="text-xl font-semibold tracking-tight hover:text-white logo-ank" onClick={()=>{
+          <Link href="/" ref={logoRef} className="text-xl font-semibold tracking-tight hover:text-white logo-ank flex items-center" onClick={()=>{
             setIsMenuOpen(false)
           }}>
-            Ank.
+            <Image alt="Logo" src="/images/Dark Logo.png" width={"50"} height={50}/> <span className='ml-2 font-Poppins font-light text-white'>Ank<span className="text-slate-400 font-normal">ith</span></span>
           </Link>
-          <div ref={navLinksRef} className="hidden md:flex space-x-1">
+          <div ref={navLinksRef} className="hidden md:flex space-x-1 mx-auto text-gray-500">
+
+            <NavLink href="/projects" setIsMenuOpen>Projects</NavLink>
             <NavLink href="#about" setIsMenuOpen>About</NavLink>
             <NavLink href="/resume" setIsMenuOpen>Resume</NavLink>
-            <NavLink href="/" setIsMenuOpen>Portfolio</NavLink>
             <NavLink href="#contact" setIsMenuOpen>Contact</NavLink>
           </div>
           <button
@@ -118,9 +120,9 @@ export default function Header() {
           style={{ height: 0 }}
         >
           <div className="mt-4 space-y-2 pb-4">
-          <NavLink href="/#about" setIsMenuOpen>About</NavLink>
+            <NavLink href="/projects" setIsMenuOpen>Projects</NavLink>
+            <NavLink href="/#about" setIsMenuOpen>About</NavLink>
             <NavLink href="/resume" setIsMenuOpen>Resume</NavLink>
-            <NavLink href="/" setIsMenuOpen>Portfolio</NavLink>
             <NavLink href="/#contact" setIsMenuOpen>Contact</NavLink>
           </div>
         </div>
@@ -133,7 +135,7 @@ function NavLink({ href, children, setIsMenuOpen }: { href: string; children: Re
   return (
     <Link
       href={href}
-      className="block px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition-colors"
+      className="block px-4 py-2 rounded-md text-sm font-medium transition-colors"
       onClick={()=>{
         setIsMenuOpen(false)
       }}

@@ -15,7 +15,9 @@ const config: Config = {
       },
       fontFamily: {
         Poppins: ["Poppins","sans-serif"],
-        FiraCode: ["Fira Code","monospace"]
+        FiraCode: ["Fira Code","monospace"],
+        NotoSans: ["Inter Tight", "Poppins","sans-serif"],
+        PPMori: ["PPMori", "Inter Tight", "Poppins","sans-serif"], // Add the new font here
       }
     },
   },
