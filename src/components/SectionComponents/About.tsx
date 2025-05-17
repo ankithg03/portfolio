@@ -30,6 +30,7 @@ const About = ({isMobile}:{isMobile:boolean}) => {
             duration: 1.1,
             bounce: 0.5,
           }}
+          /* @ts-ignore */
           className="text-[25vh] md:text-[27vw] lg:text-[58vh] text-white text-opacity-5 font-black absolute pointer-events-none rotate-90 md:rotate-0"
         >
           <Parallax scale={[isMobile ? 1.5 : 1, isMobile ? 1 : 1.2]}>

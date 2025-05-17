@@ -15,6 +15,7 @@ const Contact = () => {
             delay: 0.5,
             duration: 0.9,
           }}
+          /* @ts-ignore */
           className="qr relative w-[300px] aspect-square max-w-[70vw] opacity-90 overflow-hidden"
         >
           <Link
@@ -61,6 +62,7 @@ const Contact = () => {
                 delay: 0.8,
                 duration: 0.9,
               }}
+              /* @ts-ignore */
               target="_blank"
               data-cursor-text="visit"
               href="https://github.com/ankithg03"
@@ -75,6 +77,7 @@ const Contact = () => {
                 delay: 1.1,
                 duration: 0.8,
               }}
+              /* @ts-ignore */
               target="_blank"
               data-cursor-text="visit"
               href="https://www.linkedin.com/in/ankith-g-028373140"
@@ -89,6 +92,7 @@ const Contact = () => {
                 delay: 1.4,
                 duration: 0.7,
               }}
+              /* @ts-ignore */
               target="_blank"
               data-cursor-text="visit"
               href="https://www.instagram.com/ankith.ganganna/"

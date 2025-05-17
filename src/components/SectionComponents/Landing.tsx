@@ -5,6 +5,7 @@ import gsap from "gsap";
 
 const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*";
 
+/**  @ts-ignore */
 const scrambleText = (el, finalText, duration = 2) => {
   const iterations = finalText.length * 5;
   const intervalTime = (duration * 1000) / iterations;
@@ -13,6 +14,8 @@ const scrambleText = (el, finalText, duration = 2) => {
   const scrambleInterval = setInterval(() => {
     const newText = finalText
       .split("")
+      /**  @ts-ignore */
+
       .map((char, i) => {
         if (currentIteration / 5 > i) return char;
         return chars[Math.floor(Math.random() * chars.length)];

@@ -18,10 +18,12 @@ type projectDataType = {
   rotate?: MotionValue<number>;
 };
 
+
 const Projects = () => {
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
+    // @ts-ignore
     target: container,
     offset: ["start start", "end end"],
   });
@@ -94,6 +96,7 @@ const Projects = () => {
           {/* main zoom */}
           <motion.div
             style={{ scale: scale4 }}
+                // @ts-ignore
             className="SuperImageContainer w-full h-full absolute"
           >
             <div className="wrapper w-full h-full relative flex items-center justify-center">
@@ -101,9 +104,13 @@ const Projects = () => {
                 style={{
                   borderRadius: useTransform(scrollYProgress, [0, 1], [5, 0]),
                 }}
+                    // @ts-ignore
+
                 className="imgContainer w-[25vw] h-[25vh] absolute bg-white backdrop-blur-sm overflow-hidden flex items-center justify-center"
               >
                 <motion.div
+                    // @ts-ignore
+
                   className="w-full h-full bg-white font-black relative flex flex-col items-center justify-center"
                   style={{
                     scale: useTransform(scrollYProgress, [0, 1], [4, 1]),
@@ -117,6 +124,8 @@ const Projects = () => {
                         [1, 0, 0]
                       ),
                     }}
+                        // @ts-ignore
+
                     className="heading absolute text-[1.4vw] text-center md:text-[2vw] lg:text-[1.3vw] font-black text-black/30"
                   >
                     Projects
@@ -129,6 +138,8 @@ const Projects = () => {
                         [0, 1, 0, 0]
                       ),
                     }}
+                        // @ts-ignore
+
                     className="heading absolute text-[1vw] w-[40%] md:w-auto text-center md:text-[2vw] lg:text-[1vw] font-black text-black/30"
                   >
                     Welcome To My Multiverse
@@ -141,9 +152,12 @@ const Projects = () => {
                         [-150, -120, 0]
                       ),
                     }}
+                        // @ts-ignore
+
                     className="pt-8 heading absolute text-[1.5vw] text-center md:text-[1.3vw] lg:text-[.7vw] font-bold text-black/30 w-full h-full flex items-center justify-center gap-1 flex-col"
                   >
                     <div className="">Let{"'"}s Collaborate</div>
+                    {    /* @ts-ignore      */              }
                     <motion.div className="profile w-[90%] md:w-[50%] h-[60%] bg-black/80 rounded-sm overflow-hidden text-white flex text-[.9vw] md:text-[.3vw] text-left font-FiraCode font-light items-center">
                       <pre
                         style={{
@@ -212,6 +226,7 @@ const Projects = () => {
               <motion.div
                 key={index}
                 style={{ scale: project.scale, rotateY: project.rotate }}
+                 /* @ts-ignore      */   
                 className="SuperImageContainer w-full h-full absolute"
               >
                 <div className="imageWrapper w-full h-full relative">

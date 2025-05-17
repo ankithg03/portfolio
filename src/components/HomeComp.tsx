@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { JSX, useEffect, useRef, useState } from "react";
 import Landing from "./SectionComponents/Landing";
 import Loading from "./SectionComponents/Loading";
 import Photo from "./SectionComponents/Photo";

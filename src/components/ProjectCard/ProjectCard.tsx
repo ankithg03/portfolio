@@ -1,7 +1,7 @@
 import React from 'react';
 
 import s from './ProjectCard.module.scss'
-import clsx from 'classname'
+import clsx from 'clsx'
 
 interface ProjectCardProps {
   project: {
@@ -21,7 +21,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       <h2 className="text-lg font-bold mt-4">{project.title}</h2>
       <p className="text-gray-600">{project.description}</p>
       <div className="mt-2">
-        {project.stack.map((tech, index) => (
+        {project?.stack?.map((tech, index) => (
           <span key={index} className="text-sm text-gray-500 mr-2">{tech}</span>
         ))}
       </div>

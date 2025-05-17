@@ -21,7 +21,8 @@ export default function TextDipserse({
 
   const getChars = (element: React.ReactElement) => {
     let chars: ReactElement[] = [];
-    const word = element.props.children;
+    // @ts-ignore
+    const word = element?.props?.children;
     word.split("").forEach((char: ReactElement, i: number) => {
       chars.push(
         <motion.span
@@ -58,6 +59,7 @@ export default function TextDipserse({
         ease: [0, 0.71, 0.2, 1.01],
         // staggerChildren: 1,
       }}
+      //@ts-ignore
       onMouseEnter={() => {
         manageMouseEnter();
       }}
