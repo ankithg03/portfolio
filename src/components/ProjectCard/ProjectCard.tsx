@@ -5,12 +5,12 @@ import clsx from 'classname'
 
 interface ProjectCardProps {
   project: {
-    title: string;
-    description: string;
-    image: string;
+    title?: string;
+    description?: string;
+    image?: string;
     github?: string;
     link?: string;
-    stack: string[];
+    stack?: string[];
   };
 }
 
