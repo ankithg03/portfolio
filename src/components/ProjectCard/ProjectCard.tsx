@@ -18,15 +18,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <div className={clsx("rounded-lg shadow-md p-4 flex flex-col", s['project-card'])}>
       <img className={s['project-image']} src={project.image} alt={project.title} className="w-full h-48 object-cover" />
-      <div className='mt-4 mb-auto'>
-        <h2 className="text-lg font-bold mb-auto">{project.name}</h2>
-        <p className="text-gray-600">{project.description}</p>
-        <div>
+      <div className='mt-4 mb-auto text-center font-PPMori'>
+        <h2 className="text-lg font-bold mb-auto text-[#3b3b3b]">{project.name}</h2>
+        <p className="text-gray-500 text-sm">{project.description}</p>
+        <div className={s['projects']}>
             {project?.stack?.map((tech, index) => (
-                <span key={index} className="text-sm text-gray-500 mr-2">{tech}</span>
+                <span key={index} className="text-sm text-slate-400">{tech}</span>
             ))}
         </div>
-        <div className='grid grid-cols-2'>
+        <div className='flex gap-2 text-center justify-center'>
             {project.github && (
                 <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
                 View on GitHub

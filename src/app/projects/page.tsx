@@ -26,7 +26,7 @@ const projects = [
 },
 {
   name: "NexPWA",
-  description: "Implemented PWA features and extensions like Wishlist, Checkout etc.",
+  description: "Implemented PWA features and extensions like Wishlist etc.",
   image: "/images/projectImages/nexpwa.png",
   link: "https://nexpwa.com/",
   stack: ["Magento", "React", "GraphQL", "PWA"]
@@ -45,7 +45,7 @@ const projects = [
   stack: ["Magento", "React", "Semantic UI", "PHP"]
 },
 {
-  name: "Furtados - Music Ecommerce",
+  name: "Furtados - Music Ecomm",
   description: "Developed brand listing, blog, FAQ & etc.",
   image: "/images/projectImages/furtados.png",
   link:"https://www.furtadosonline.com/",
@@ -66,14 +66,14 @@ const projects = [
   stack: ["Magento", "API", "Frontend"]
 },
 {
-  name: "RPT Platform (Internal Product)",
-  description: "Revamped architecture from src to app/code, integrated GraphQL, created Symfony console commands, and built EAV models.",
+  name: "RPT (Internal Product)",
+  description: "Created Laravel app from symphony, and integrated GraphQL, created CLI commands, and EAV models.",
   image: "/images/projectImages/codilar.png",
   stack: ["Magento", "Symfony", "GraphQL", "EAV"]
 },
 {
   name: "Wingreens",
-  description: "Built product comparison, mobile login extension, invoice and shipment GraphQL, and newsletter GraphQL features.",
+  description: "Built product comparison, mobile login extension, and etc.",
   image: "/images/projectImages/wingreens.png",
   stack: ["Magento", "React", "GraphQL", "Checkout"]
 },
