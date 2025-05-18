@@ -78,10 +78,53 @@ const projects = [
   stack: ["Magento", "React", "GraphQL", "Checkout"]
 },
 {
-  name: "Instagram",
-  description: "Instagram profile :P",
-  image: "/images/projectImages/instagram.png",
-  stack: ["Just my Insta"],
+  name: "Mudpie",
+  description: "Built the project from scratch with all Ecommerce feature",
+  image: "/images/projectImages/mudpie.png",
+  link:"https://www.mudpie.com/",
+  stack: ["Magento", "React", "GraphQL", "NextJS", "Pylot"]
+},
+{
+  name: "Minerva Beauty",
+  description: "Developed the Blog, Adon Product, and etc",
+  image: "/images/projectImages/minervabeauty.png",
+  link:"https://www.minervabeauty.com/",
+  stack: ["NextJS", "Magento 2.4"],
+},
+{
+  name: "Zayn Myza",
+  description: "Designed the Product Card, and Overall website",
+  image: "/images/projectImages/zaynmyza.png",
+  link:"https://zaynmyza.com/",
+  stack: ["ScandiPWA", "Magento 2.4", "ReactJS"],
+},
+{
+  name: "American Meadows",
+  description: "Developed the Blog, Adon Product, and etc",
+  image: "/images/projectImages/americanmeadows.png",
+  link:"https://www.americanmeadows.com/",
+  stack: ["NextJS", "Magento 2.4"],
+},
+{
+  name: "USGB",
+  description: "Developed the Riskified, Gold Product Page, and etc",
+  image: "/images/projectImages/usgb.png",
+  link:"https://www.usgoldbureau.com/",
+  stack: ["NextJS", "Magento 2.4"],
+},
+{
+  name: "SuperATV",
+  description: "Integrated Dynamic Yield, & Algolia and Developed FreeGift and etc",
+  image: "/images/projectImages/satv.png",
+  link:"https://superatv.com/",
+  stack: ["NextJS", "ReactJS", "Magento 2.4"],
+},
+{
+  name: "OFI",
+  description: "Developed Parallax Banner, Announcement Banner and etc",
+  image: "/images/projectImages/ofi.png",
+  link:"https://ofi.com/",
+  stack: ["NextJS", "ReactJS", "Magento 2.4"],
 },
 {
   name: "Delivery Design",
