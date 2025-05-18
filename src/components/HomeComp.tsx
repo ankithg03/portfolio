@@ -112,7 +112,7 @@ const HomeComp: React.FC<HomeType> = ({ isMobile }:HomeType ): JSX.Element => {
           layers={[
             { image: '/images/home-banner-2.jpg', speed: -20 },
             {
-              speed: -15,
+              speed: -25,
               children: (
                 <div className="absolute inset-0 flex items-center justify-center font-PPMori">
                   <h1 className="text-2xl bg-black px-4 py-2 text-white font-normal">Save the <b>Planet</b>. Ride a <i>bike.</i></h1>
@@ -126,7 +126,7 @@ const HomeComp: React.FC<HomeType> = ({ isMobile }:HomeType ): JSX.Element => {
           layers={[
             { image: '/images/home-banner-3.jpg', speed: -20 },
             {
-              speed: -15,
+              speed: -25,
               children: (
                 <div className="absolute inset-0 flex items-center justify-center font-PPMori">
                   <h1 className="text-2xl bg-black text-white px-4 py-2 font-normal">Choose only one master—<i>nature</i>.</h1>
