@@ -44,9 +44,9 @@ export default function ResumePage() {
       {isLoading ? (
         isMobile ? (
           <Cursor
-            isGelly={true}
-            cursorBackgrounColor="#fff"
-            cursorSize={60}
+            isGelly={false}
+            cursorBackgrounColor="#ffffffcc"
+            cursorSize={30}
             exclusionBackgroundColor="#000"
             cursorInnerColor="#000"
             colorAnimationDuration={0.5}

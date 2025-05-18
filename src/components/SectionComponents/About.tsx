@@ -33,7 +33,7 @@ const About = ({isMobile}:{isMobile:boolean}) => {
           /* @ts-ignore */
           className="text-[25vh] md:text-[27vw] lg:text-[58vh] text-white text-opacity-5 font-black absolute pointer-events-none rotate-90 md:rotate-0"
         >
-          <Parallax scale={[isMobile ? 1.5 : 1, isMobile ? 1 : 1.2]}>
+          <Parallax scale={[isMobile ? 1.2 : 1, isMobile ? .5 : 5]}>
             ABOUT
           </Parallax>
         </motion.div>

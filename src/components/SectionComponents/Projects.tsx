@@ -126,7 +126,7 @@ const Projects = () => {
                     }}
                         // @ts-ignore
 
-                    className="heading absolute text-[1.4vw] text-center md:text-[2vw] lg:text-[1.3vw] font-black text-black/30"
+                    className="heading absolute text-[1.4vw] text-center md:text-[2vw] lg:text-[1.3vw] font-black text-black/30 font-PPMori"
                   >
                     Projects
                   </motion.div>
@@ -140,7 +140,7 @@ const Projects = () => {
                     }}
                         // @ts-ignore
 
-                    className="heading absolute text-[1vw] w-[40%] md:w-auto text-center md:text-[2vw] lg:text-[1vw] font-black text-black/30"
+                    className="heading absolute text-[1vw] w-[40%] md:w-auto text-center md:text-[2vw] lg:text-[1vw] font-black text-black/30 font-PPMori"
                   >
                     Welcome To My Multiverse
                   </motion.div>

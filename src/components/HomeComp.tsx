@@ -10,6 +10,10 @@ import Projects from "./SectionComponents/Projects";
 import Contact from "./SectionComponents/Contact";
 type HomeType = { isMobile: boolean }
 import Vimeo from '@u-wave/react-vimeo';
+import { Parallax, ParallaxBanner } from "react-scroll-parallax";
+import { motion } from "framer-motion";
+import s from './HomeComponent.module.scss'
+import clsx from "clsx";
 
 const HomeComp: React.FC<HomeType> = ({ isMobile }:HomeType ): JSX.Element => {
   const [loading, setLoading] = useState(true);
@@ -34,7 +38,6 @@ const HomeComp: React.FC<HomeType> = ({ isMobile }:HomeType ): JSX.Element => {
 
   const handlePlay = () => {
     if (videoRef.current) {
-      console.log('aaa', videoRef.current, videoRef.current.play)
       videoRef.current.play();
       setIsPlaying(true);
     }
@@ -52,23 +55,88 @@ const HomeComp: React.FC<HomeType> = ({ isMobile }:HomeType ): JSX.Element => {
       <Landing />
       <Photo />
       <About isMobile={isMobile} />
+      <div
+           className="w-full md:px-4 gap-x-4"
+      >
+        <motion.div
+          whileInView={{ opacity: 1, letterSpacing: "0px" }}
+          initial={{ opacity: 0, letterSpacing: "50px" }}
+          viewport={{ once: true, margin: "-35%" }}
+          transition={{
+            duration: 1.1,
+            bounce: 0.5,
+          }}
+          /* @ts-ignore */
+          className="text-5xl md:text-[25vh] text-opacity-5 rotate-0 text-center md:px-4 py-2 text-white font-NotoSans font-bold overflow-x-hidden md:overflow-x-visible  pt-[13%]"
+        >
+          <Parallax scale={[isMobile ? 1 : 1, isMobile ? 3 : 5]}>
+            VLOG
+          </Parallax>
+        </motion.div>
+      </div>
       <section
-        className="w-full	"
-        data-cursor-text="Move The Mouse"
+        className="w-full	grid grid-cols-1 md:grid-cols-2 md:px-4 gap-x-4"
         data-cursor-size={100}
       >
-        <Vimeo
-          ref={videoRef}
-          video="1085323471"
-          autoplay={isPlaying}
-          responsive
-          transparent
-          showTitle={false}
-          showPortrait={false}
-          background={false}
-          muted={false}
-          controls={true}
+       <div
+          className={
+            clsx(
+              "grid grid-cols-1 md:grid-cols-2 gap-4 w-full mx-auto",
+              s['vimeo-section']
+            )
+          }
+          data-cursor-text="Play"
+       >
+          <Vimeo
+              video="1085323471"
+              autoplay={isPlaying}
+              responsive
+              transparent
+              showTitle={false}
+              showPortrait={false}
+              background={false}
+              muted={false}
+              controls={true}
+            />
+            <Vimeo
+              video="1085402032"
+              responsive
+              transparent
+              showTitle={false}
+              showPortrait={false}
+              controls={true}
+            />
+       </div>
+        <div className="grid md:gap-4">
+        <ParallaxBanner
+          layers={[
+            { image: '/images/home-banner-2.jpg', speed: -20 },
+            {
+              speed: -15,
+              children: (
+                <div className="absolute inset-0 flex items-center justify-center font-PPMori">
+                  <h1 className="text-2xl bg-black px-4 py-2 text-white font-normal">Save the <b>Planet</b>. Ride a <i>bike.</i></h1>
+                </div>
+              ),
+            },
+          ]}
+          className="aspect-[2/3] md:aspect-[2/1] md:rounded-md"
         />
+        <ParallaxBanner
+          layers={[
+            { image: '/images/home-banner-3.jpg', speed: -20 },
+            {
+              speed: -15,
+              children: (
+                <div className="absolute inset-0 flex items-center justify-center font-PPMori">
+                  <h1 className="text-2xl bg-black text-white px-4 py-2 font-normal">Choose only one master—<i>nature</i>.</h1>
+                </div>
+              ),
+            },
+          ]}
+          className="aspect-[2/3] md:aspect-[2/1] md:rounded-md"
+        />
+        </div>
       </section>
       <Projects/>
       
