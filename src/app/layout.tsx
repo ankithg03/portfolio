@@ -10,6 +10,16 @@ export const metadata: Metadata = {
   description: "The Pathway of Ankith G's Life",
 };
 
+const Footer: React.FC = () => {
+  return (
+    <footer className="w-full text-slate-300 text-center py-4 font-PPMori">
+      <p className="text-sm">
+      Copyright &copy; {new Date().getFullYear()} Ankith G. All rights reserved.
+      </p>
+    </footer>
+  );
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -43,6 +53,9 @@ export default function RootLayout({
       <body className={inter.className + " select-none"}>
         <HeaderComponent />
         {children}
+        <Footer />
+
+
         </body>
     </html>
   );

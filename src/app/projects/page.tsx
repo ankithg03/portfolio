@@ -9,13 +9,73 @@ import ProjectBanner from "@/components/ProjectBanner";
 import s from '@/components/ProjectCard/ProjectCard.module.scss'
 import clsx from "clsx";
 
-const projects = [{
+const projects = [
+  {
+    name: "Logo Design",
+    description: "Figma Design for My Logo",
+    image: "/images/Logo.png",
+    stack: ["Figma", "Vector Design"],
+  },
+  {
   name: "Ank Music",
   description: "The Ank Music player",
   image: '/images/projectImages/ank-music.gif',
   github: "https://github.com/ankithg03/music-player",
   link: "https://ank-music-player.vercel.app/",
   stack: ["React", "NextJS", "NodeJS"],
+},
+{
+  name: "NexPWA",
+  description: "Implemented PWA features and extensions like Wishlist, Checkout etc.",
+  image: "/images/projectImages/nexpwa.png",
+  link: "https://nexpwa.com/",
+  stack: ["Magento", "React", "GraphQL", "PWA"]
+},
+{
+  name: "DAMRO India",
+  description: "Implemented Abandoned Cart, Store Locator, and etc",
+  image: "/images/projectImages/damro.png",
+  link:"https://www.damroindia.com/",
+  stack: ["Magento", "PHP", "KnockoutJS", "Less"]
+},
+{
+  name: "THRiveON",
+  description: "Developed donation modules, sliders, and etc.",
+  image: "/images/projectImages/thriveon.png",
+  stack: ["Magento", "React", "Semantic UI", "PHP"]
+},
+{
+  name: "Furtados - Music Ecommerce",
+  description: "Developed brand listing, blog, FAQ & etc.",
+  image: "/images/projectImages/furtados.png",
+  link:"https://www.furtadosonline.com/",
+  stack: ["Magento", "React", "GraphQL", "Redis"]
+},
+{
+  name: "Rely.SG Payment Gateway",
+  description: "Built promotional blocks, checkout flows including in-context and redirect methods, with order features.",
+  image: "/images/projectImages/rely.png",
+  github:"https://github.com/RelyGateway/relymagento2", 
+  stack: ["Magento", "PHP", "JavaScript"]
+},
+{
+  name: "Codilar Internal Tools",
+  description: "Developed Instagram widget, offer blocks in PLP, and testimonial module integration.",
+  image: "/images/projectImages/codilar.png",
+  github:"https://github.com/codilar",
+  stack: ["Magento", "API", "Frontend"]
+},
+{
+  name: "RPT Platform (Internal Product)",
+  description: "Revamped architecture from src to app/code, integrated GraphQL, created Symfony console commands, and built EAV models.",
+  image: "/images/projectImages/codilar.png",
+  stack: ["Magento", "Symfony", "GraphQL", "EAV"]
+},
+{
+  name: "Wingreens",
+  description: "Built product comparison, mobile login extension, invoice and shipment GraphQL, and newsletter GraphQL features.",
+  image: "/images/projectImages/wingreens.png",
+  stack: ["Magento", "React", "GraphQL", "Checkout"]
 },
 {
   name: "Instagram",
@@ -69,7 +129,7 @@ const Projects = () => {
             }
           >
             <ProjectBanner />
-            <div className={clsx("container mx-auto py-8 px-4", s['project-container '])}>
+            <div className={clsx("container mx-auto py-8 px-4", s['project-container'])}>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {projects.map((project, index) => (
                   <ProjectCard key={index} project={project} />

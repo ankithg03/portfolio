@@ -142,7 +142,7 @@ const Projects = () => {
 
                     className="heading absolute text-[1vw] w-[40%] md:w-auto text-center md:text-[2vw] lg:text-[1vw] font-black text-black/30 font-PPMori"
                   >
-                    Welcome To My Multiverse
+                    Welcome to my <b><i>multiverse</i></b>
                   </motion.div>
                   <motion.div
                     style={{
