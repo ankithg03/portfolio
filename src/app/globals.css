@@ -5,10 +5,24 @@
 @font-face {
   font-family: 'PPMori';
   src: url('/font/PPMori.otf') format('opentype'), 
-       url('/font/PPMori-Regular.otf') format('opentype');
+       url('/font/PPMori-Regular.otf') format('opentype'),
+       url('/font/PPMori-SemiBold.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'PPMori-Regular';
+  src:     url('/font/PPMori-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PPMori-bold';
+  src:     url('/font/PPMori-SemiBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 /* Other global styles... */
 
