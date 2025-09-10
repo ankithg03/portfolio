@@ -23,7 +23,7 @@ export default function Header() {
     const bgAnimation = bgAnimationRef.current
 
     // Initial animations
-    gsap.fromTo(header, 
+    gsap.fromTo(header,
       { opacity: 0, y: -50 },
       { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
     )
@@ -40,7 +40,7 @@ export default function Header() {
         { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, delay: 0.5, ease: 'power3.out' }
       )
     }
-    
+
 
     // Background animation
     gsap.to(bgAnimation, {
@@ -50,7 +50,7 @@ export default function Header() {
       ease: 'none',
     })
 
-    // Hover animations for nav links 
+    // Hover animations for nav links
     // @ts-ignore
     navLinks?.childNodes?.forEach((link) => {
       link.addEventListener('mouseenter', () => {
@@ -79,7 +79,7 @@ export default function Header() {
           { opacity: 0, y: -20 },
           { opacity: 1, y: 0, duration: 0.3, stagger: 0.1, ease: 'power2.out',height: '100%'  }
         )
-      } else {     
+      } else {
         gsap.to(mobileMenuRef.current, {
           height: 0,
           duration: 0.5,
@@ -104,6 +104,7 @@ export default function Header() {
             <NavLink href="/projects" setIsMenuOpen>Projects</NavLink>
             <NavLink href="#about" setIsMenuOpen>About</NavLink>
             <NavLink href="/resume" setIsMenuOpen>Resume</NavLink>
+            <NavLink href="/blog" setIsMenuOpen>Blog</NavLink>
             <NavLink href="#contact" setIsMenuOpen>Contact</NavLink>
           </div>
           <button
@@ -114,8 +115,8 @@ export default function Header() {
             {isMenuOpen ? <IoClose /> : <FiAlignJustify />}
           </button>
         </nav>
-        <div 
-          ref={mobileMenuRef} 
+        <div
+          ref={mobileMenuRef}
           className="md:hidden overflow-hidden"
           style={{ height: 0 }}
         >
@@ -123,6 +124,7 @@ export default function Header() {
             <NavLink href="/projects" setIsMenuOpen>Projects</NavLink>
             <NavLink href="/#about" setIsMenuOpen>About</NavLink>
             <NavLink href="/resume" setIsMenuOpen>Resume</NavLink>
+            <NavLink href="/blog" setIsMenuOpen>Blog</NavLink>
             <NavLink href="/#contact" setIsMenuOpen>Contact</NavLink>
           </div>
         </div>

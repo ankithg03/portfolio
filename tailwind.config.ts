@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import defaultTheme from 'tailwindcss/defaultTheme'
 
 const config: Config = {
   content: [
@@ -8,6 +9,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {},
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -17,7 +19,8 @@ const config: Config = {
         Poppins: ["Poppins","sans-serif"],
         FiraCode: ["Fira Code","monospace"],
         NotoSans: ["Inter Tight", "Poppins","sans-serif"],
-        PPMori: ["PPMori", "Inter Tight", "Poppins","sans-serif"], // Add the new font here
+        PPMori: ["PPMori", "Inter Tight", "Poppins","sans-serif"],
+        sans: ['var(--font-urbanist)', ...defaultTheme.fontFamily.sans],
       }
     },
   },

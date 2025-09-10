@@ -8,7 +8,7 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 // @ts-ignore
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import './ResumeComponent.css'
-// import pdf from '../../../public/images/Assets/Ankith.pdf'
+// import pdf from '../../../public/Images/Assets/Ankith.pdf'
 
 // Set up the worker for pdf.js
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
@@ -22,8 +22,8 @@ const ResumeComponent = ({ isMobile }: { isMobile: boolean }) => {
     function delay(ms: number) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
-    
-    
+
+
     const [numPages, setNumPages] = useState<number | null>(null);
     const [error, setError] = useState<string | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
@@ -31,7 +31,7 @@ const ResumeComponent = ({ isMobile }: { isMobile: boolean }) => {
     // useEffect(() => {
     //     const handleResize = () => setWidth(window.innerWidth);
     //     window.addEventListener("resize", handleResize);
-        
+
     //     return () => window.removeEventListener("resize", handleResize);
     // }, []);
     useEffect(()=>{

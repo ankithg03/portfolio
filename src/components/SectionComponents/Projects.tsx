@@ -3,8 +3,8 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React, { useRef } from "react";
 
-import ankMusic from "../../../public/images/projectImages/ank-music.gif";
-import quiz from "../../../public/images/projectImages/quiz.gif";
+import ankMusic from "../../../public/Images/projectImages/ank-music.gif";
+import quiz from "../../../public/Images/projectImages/quiz.gif";
 
 type projectDataType = {
   name: string;
@@ -226,7 +226,7 @@ const Projects = () => {
               <motion.div
                 key={index}
                 style={{ scale: project.scale, rotateY: project.rotate }}
-                 /* @ts-ignore      */   
+                 /* @ts-ignore      */
                 className="SuperImageContainer w-full h-full absolute"
               >
                 <div className="imageWrapper w-full h-full relative">
