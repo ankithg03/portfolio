@@ -15,7 +15,8 @@ const Footer: React.FC = () => {
   return (
     <footer className="w-full text-slate-300 text-center py-4 font-PPMori">
       <p className="text-sm">
-      Copyright &copy; {new Date().getFullYear()} Ankith G. All rights reserved.
+        Copyright &copy; {new Date().getFullYear()} Ankith G. All rights
+        reserved.
       </p>
     </footer>
   );
@@ -56,12 +57,19 @@ export default async function RootLayout({
       </head>
       <body className={inter.className + " select-none"}>
         <ContentfulPreviewProvider
-          locale={locale ?? 'en-US'}
+          locale={locale ?? "en-US"}
           enableInspectorMode
           enableLiveUpdates
-          space={process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID || process.env.CONTENTFUL_SPACE_ID || ""}
-          environment={process.env.NEXT_PUBLIC_CONTENTFUL_ENVIRONMENT || process.env.CONTENTFUL_ENVIRONMENT || "master"}
-          accessToken={process.env.NEXT_PUBLIC_CONTENTFUL_CONTENT_DELIVERY_TOKEN || process.env.NEXT_PUBLIC_CONTENTFUL_PREVIEW_TOKEN || process.env.CONTENTFUL_CONTENT_PREVIEW_TOKEN || process.env.CONTENTFUL_CONTENT_DELIVERY_TOKEN || ""}
+          space={
+            process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID ||
+            process.env.CONTENTFUL_SPACE_ID ||
+            ""
+          }
+          environment={
+            process.env.NEXT_PUBLIC_CONTENTFUL_ENVIRONMENT ||
+            process.env.CONTENTFUL_ENVIRONMENT ||
+            "master"
+          }
         >
           <HeaderComponent />
           {children}

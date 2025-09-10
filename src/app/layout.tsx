@@ -1,10 +1,11 @@
-import '@src/app/globals.css';
+import "@src/app/globals.css";
 
-interface LayoutProps {
+export default async function RootLayout({
+  children,
+  params,
+}: {
   children: React.ReactNode;
-  params: { locale: string };
-}
-
-export default async function RootLayout({ children }: LayoutProps) {
+  params?: Promise<Record<string, string>>;
+}) {
   return children;
 }

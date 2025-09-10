@@ -1,6 +1,6 @@
 "use client";
 
-import HomeComp from "@/components/HomeComp";
+import HomeComp from "@src/components/HomeComp";
 import React from "react";
 import { useEffect, useState } from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
@@ -8,7 +8,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import { Cursor } from "react-creative-cursor";
 import "react-creative-cursor/dist/styles.css";
 import { useRouter } from "next/navigation";
-import Gyroscope from "@/components/CommonComponents/Gyroscope/Gyroscope";
+import Gyroscope from "@src/components/CommonComponents/Gyroscope/Gyroscope";
 
 import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 
@@ -25,7 +25,7 @@ export default function Home() {
 
   useEffect(() => {
     setIsMobile(
-      window.matchMedia("only screen and (min-width: 1000px)").matches
+      window.matchMedia("only screen and (min-width: 1000px)").matches,
     );
   }, [isMobile]);
 
