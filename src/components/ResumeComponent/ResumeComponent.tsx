@@ -2,16 +2,32 @@
 
 import React, { useState, useEffect } from "react";
 import { AiOutlineDownload } from "react-icons/ai";
-// @ts-ignore
-import { Document, Page, pdfjs } from "react-pdf";
+import dynamic from "next/dynamic";
+const ReactPdf = dynamic(
+  () =>
+    import("react-pdf").then(
+      (m) =>
+        ({
+          Document: m.Document,
+          Page: m.Page,
+          pdfjs: m.pdfjs,
+        }) as any,
+    ),
+  { ssr: false },
+) as unknown as { Document: any; Page: any; pdfjs: any };
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 // @ts-ignore
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "./ResumeComponent.css";
 // import pdf from '../../../public/images/Assets/Ankith.pdf'
 
-// Set up the worker for pdf.js
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+// Set up the worker for pdf.js in the browser only
+if (typeof window !== "undefined") {
+  const { pdfjs } = ReactPdf as any;
+  if (pdfjs) {
+    pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+  }
+}
 
 const resumeLink = "/images/Assets/Ankith.pdf"; // Direct link to the PDF
 
@@ -73,7 +89,7 @@ const ResumeComponent = ({ isMobile }: { isMobile: boolean }) => {
           <div className="resume-loader">
             <Skeleton height={30} width={"100%"} />
           </div>
-          <Document
+          <ReactPdf.Document
             file={resumeLink}
             onLoadSuccess={onLoadSuccess}
             onLoadError={onLoadError}
@@ -84,8 +100,8 @@ const ResumeComponent = ({ isMobile }: { isMobile: boolean }) => {
               </div>
             }
           >
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-          </Document>
+            <ReactPdf.Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+          </ReactPdf.Document>
         </div>
       </div>
     </div>

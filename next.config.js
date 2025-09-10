@@ -67,6 +67,13 @@ module.exports = withPlugins(plugins, {
   },
 
   webpack(config) {
+    // Avoid server-side resolving optional native deps
+    config.resolve = config.resolve || {};
+    config.resolve.alias = {
+      ...(config.resolve.alias || {}),
+      canvas: false,
+    };
+
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
