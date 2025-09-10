@@ -3,8 +3,8 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React, { useRef } from "react";
 
-import ankMusic from "../../../public/Images/projectImages/ank-music.gif";
-import quiz from "../../../public/Images/projectImages/quiz.gif";
+import ankMusic from "../../../public/images/projectImages/ank-music.gif";
+import quiz from "../../../public/images/projectImages/quiz.gif";
 
 type projectDataType = {
   name: string;
@@ -17,7 +17,6 @@ type projectDataType = {
   scale: MotionValue<number>;
   rotate?: MotionValue<number>;
 };
-
 
 const Projects = () => {
   const container = useRef(null);
@@ -96,7 +95,7 @@ const Projects = () => {
           {/* main zoom */}
           <motion.div
             style={{ scale: scale4 }}
-                // @ts-ignore
+            // @ts-ignore
             className="SuperImageContainer w-full h-full absolute"
           >
             <div className="wrapper w-full h-full relative flex items-center justify-center">
@@ -104,12 +103,12 @@ const Projects = () => {
                 style={{
                   borderRadius: useTransform(scrollYProgress, [0, 1], [5, 0]),
                 }}
-                    // @ts-ignore
+                // @ts-ignore
 
                 className="imgContainer w-[25vw] h-[25vh] absolute bg-white backdrop-blur-sm overflow-hidden flex items-center justify-center"
               >
                 <motion.div
-                    // @ts-ignore
+                  // @ts-ignore
 
                   className="w-full h-full bg-white font-black relative flex flex-col items-center justify-center"
                   style={{
@@ -121,10 +120,10 @@ const Projects = () => {
                       opacity: useTransform(
                         scrollYProgress,
                         [0, 0.1, 1],
-                        [1, 0, 0]
+                        [1, 0, 0],
                       ),
                     }}
-                        // @ts-ignore
+                    // @ts-ignore
 
                     className="heading absolute text-[1.4vw] text-center md:text-[2vw] lg:text-[1.3vw] font-black text-black/30 font-PPMori"
                   >
@@ -135,29 +134,32 @@ const Projects = () => {
                       opacity: useTransform(
                         scrollYProgress,
                         [0, 0.55, 0.95, 1],
-                        [0, 1, 0, 0]
+                        [0, 1, 0, 0],
                       ),
                     }}
-                        // @ts-ignore
+                    // @ts-ignore
 
                     className="heading absolute text-[1vw] w-[40%] md:w-auto text-center md:text-[2vw] lg:text-[1vw] font-black text-black/30 font-PPMori"
                   >
-                    Welcome to my <b><i>multiverse</i></b>
+                    Welcome to my{" "}
+                    <b>
+                      <i>multiverse</i>
+                    </b>
                   </motion.div>
                   <motion.div
                     style={{
                       translateY: useTransform(
                         scrollYProgress,
                         [0, 0.85, 1],
-                        [-150, -120, 0]
+                        [-150, -120, 0],
                       ),
                     }}
-                        // @ts-ignore
+                    // @ts-ignore
 
                     className="pt-8 heading absolute text-[1.5vw] text-center md:text-[1.3vw] lg:text-[.7vw] font-bold text-black/30 w-full h-full flex items-center justify-center gap-1 flex-col"
                   >
                     <div className="">Let{"'"}s Collaborate</div>
-                    {    /* @ts-ignore      */              }
+                    {/* @ts-ignore      */}
                     <motion.div className="profile w-[90%] md:w-[50%] h-[60%] bg-black/80 rounded-sm overflow-hidden text-white flex text-[.9vw] md:text-[.3vw] text-left font-FiraCode font-light items-center">
                       <pre
                         style={{
@@ -226,7 +228,7 @@ const Projects = () => {
               <motion.div
                 key={index}
                 style={{ scale: project.scale, rotateY: project.rotate }}
-                 /* @ts-ignore      */
+                /* @ts-ignore      */
                 className="SuperImageContainer w-full h-full absolute"
               >
                 <div className="imageWrapper w-full h-full relative">
