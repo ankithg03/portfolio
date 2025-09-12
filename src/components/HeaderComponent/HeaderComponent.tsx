@@ -136,7 +136,7 @@ export default function Header() {
             <NavLink href="/projects" setIsMenuOpen={setIsMenuOpen}>
               Projects
             </NavLink>
-            <NavLink href="#about" setIsMenuOpen={setIsMenuOpen}>
+            <NavLink href="/#about" setIsMenuOpen={setIsMenuOpen}>
               About
             </NavLink>
             <NavLink href="/resume" setIsMenuOpen={setIsMenuOpen}>
@@ -145,7 +145,7 @@ export default function Header() {
             <NavLink href="/blog" setIsMenuOpen={setIsMenuOpen}>
               Blog
             </NavLink>
-            <NavLink href="#contact" setIsMenuOpen={setIsMenuOpen}>
+            <NavLink href="/#contact" setIsMenuOpen={setIsMenuOpen}>
               Contact
             </NavLink>
           </div>
