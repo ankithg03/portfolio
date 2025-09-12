@@ -30,20 +30,54 @@
 @tailwind components;
 @tailwind utilities;
 
- :root {
-        }
-
 :root {
-              --primary: #2A2356;
-
+  --primary: #2A2356;
   --secondary: #1e1e20;
   --secondary2: #252529;
   --main: #dfdfd7;
   --main2: #dfdfd7;
   --button: #747bff;
-    --accent: #E45858;
+  --accent: #E45858;
   --light: #FFFFFE;
   --dark: #0F0E17;
+  --port-primary: #dee7ff;
+  --port-secondary: #1d4ed8;
+  --port-dark-primary: #1d4ed8;
+  --port-black-primary: #FFFFFE;
+}
+
+/* Explicit light theme */
+[data-theme="light"] {
+  --primary: #2A2356;
+  --secondary: #111827;
+  --secondary2: #374151;
+  --main: #ffffff;
+  --main2: #f7f7f8;
+  --button: #4f46e5;
+  --accent: #E45858;
+  --light: #ffffff;
+  --dark: #0F0E17;
+  --port-primary: #1d4ed8;  
+  --port-secondary: #dee7ff;
+  --port-dark-primary: #0a2777;
+  --port-black-primary: #000000;
+
+}
+
+/* Explicit dark theme */
+[data-theme="dark"] {
+  --main: #0f0f12;
+  --main2: #1a1b1e;
+  --secondary: #e7e7df;
+  --secondary2: #d9d9d1;
+  --button: #6366f1;
+  --accent: #ef4444;
+  --light: #ffffff;
+  --dark: #0F0E17;
+  --port-primary: #dee7ff;
+  --port-secondary: #ffffff29;
+  --port-dark-primary: #0a2777;
+  --port-black-primary: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -58,9 +92,18 @@
 
 body {
   color: var(--secondary2);
-  background: #202123;
+  /* background: #202123; */
+  background: var(--main);
 }
 
+[data-theme="light"] body {
+  color: var(--secondary);
+  background: var(--main);
+}
+[data-theme="dark"] body {
+  color: var(--secondary2);
+  background: var(--main);
+}
 * {
   margin: 0;
   padding: 0;
@@ -91,7 +134,6 @@ html.has-scroll-smooth {
 	left: 0;
 	width: 100vw;
 }
-
 
 
 

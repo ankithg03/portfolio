@@ -3,6 +3,8 @@
     --button-motion-duration: 0s;
     --button-scale-up: 1.05;
     --button-scale-down: 0.95;
+    --button-text: var(--light);
+    --button-fill: var(--accent);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -15,7 +17,7 @@
     appearance: none;
     background: transparent;
     border: 0;
-    color: #fff;
+    color: var(--button-text);
     cursor: pointer;
     font: inherit;
     font-weight: 500;
@@ -49,7 +51,7 @@
 }
 
 .button__shape {
-    fill: #950cde;
+    fill: var(--button-fill);
     position: absolute;
     inset: 0;
     inline-size: 100%;

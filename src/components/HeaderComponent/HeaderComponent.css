@@ -1,6 +1,6 @@
 .nav-bg {
     border-radius: 7px;
-    background: #ffffff38;
+    background: var(--main2);
     a {
         text-decoration: none;
         position: relative;
@@ -36,10 +36,10 @@
     }
 }
 .logo-ank {
-    color: #ffe100;
+    color: var(--port-primary);
 }
 header {
     z-index: 99;
     width: calc(100%);
-    background: #000000f5;
+    background: var(--dark);
 }

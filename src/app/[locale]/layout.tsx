@@ -3,6 +3,7 @@ import { ContentfulPreviewProvider } from "@src/components/features/contentful/C
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { ToastProvider } from "@src/components/shared/toast/ToastProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,7 +56,7 @@ export default async function RootLayout({
         <meta name="msapplication-TileColor" content="#00aba9" />
         <meta name="theme-color" content="#000000" />
       </head>
-      <body className={inter.className + " select-none"}>
+      <body className={inter.className + " select-none"} data-theme="light">
         <ContentfulPreviewProvider
           locale={locale ?? "en-US"}
           enableInspectorMode
@@ -71,9 +72,11 @@ export default async function RootLayout({
             "master"
           }
         >
-          <HeaderComponent />
-          {children}
-          <Footer />
+          <ToastProvider>
+            <HeaderComponent />
+            {children}
+            <Footer />
+          </ToastProvider>
         </ContentfulPreviewProvider>
       </body>
     </html>

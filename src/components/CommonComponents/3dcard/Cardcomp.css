@@ -57,9 +57,9 @@
   transform-style: preserve-3d;
   transform: translateZ(40px);
   z-index: -1;
-  background: #040404;
+  background: var(--dark);
   transform: scale(0.5, 0.5);
-  box-shadow: 0 0 30px 10px #040404;
+  box-shadow: 0 0 30px 10px var(--dark);
 }
 
 .card-front,

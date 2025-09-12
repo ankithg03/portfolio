@@ -15,7 +15,12 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
-      colors,
+      colors: {
+        ...colors,
+        'port-secondary': 'var(--port-secondary)',
+        'port-dark-primary': 'var(--port-dark-primary)',
+        'port-black-primary': 'var(--port-black-primary)',
+      },
       maxWidth: {
         '8xl': '90rem',
       },

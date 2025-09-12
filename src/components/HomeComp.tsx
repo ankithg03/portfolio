@@ -69,7 +69,7 @@ const HomeComp: React.FC<HomeType> = ({ isMobile }: HomeType): JSX.Element => {
             bounce: 0.5,
           }}
           /* @ts-ignore */
-          className="text-5xl md:text-[25vh] text-opacity-5 rotate-0 text-center md:px-4 py-2 text-white font-NotoSans font-bold overflow-x-hidden md:overflow-x-visible  pt-[13%]"
+          className="text-5xl md:text-[25vh] text-opacity-5 rotate-0 text-center md:px-4 py-2 text-port-secondary font-NotoSans font-bold overflow-x-hidden md:overflow-x-visible  pt-[13%]"
         >
           <Parallax scale={[isMobile ? 1 : 1, isMobile ? 3 : 5]}>VLOG</Parallax>
         </motion.div>
