@@ -20,7 +20,7 @@ export default function Header() {
   useEffect(() => {
     const header = headerRef.current;
     const logo = logoRef.current;
-    const navLinks = navLinksRef.current;
+    const navLinks = navLinksRef?.current;
     const bgAnimation = bgAnimationRef.current;
 
     gsap.fromTo(
@@ -37,9 +37,10 @@ export default function Header() {
 
     // @ts-ignore
     if (typeof navLinks?.children !== "undefined") {
-      // @ts-ignore
+      const navLinksData = navLinks as HTMLElement[];
       gsap.fromTo(
-        navLinks?.children,
+        //@ts-ignore
+        navLinksData?.children,
         { opacity: 0, y: -20 },
         {
           opacity: 1,
