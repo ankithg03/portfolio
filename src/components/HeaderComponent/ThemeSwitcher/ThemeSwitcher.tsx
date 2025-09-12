@@ -14,7 +14,7 @@ export default function ThemeSwitcher() {
       setTheme(saved);
       document.body.dataset.theme = saved;
     } else {
-      document.body.dataset.theme = "light";
+      document.body.dataset.theme = "dark";
     }
   }, []);
 
