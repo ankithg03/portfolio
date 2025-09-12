@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import ProjectCard from "@src/components/ProjectCard";
-import { ParallaxBannerLayer, ParallaxProvider } from "react-scroll-parallax";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 import { ReactLenis } from "@studio-freight/react-lenis";
 import ProjectBanner from "@src/components/ProjectBanner";
