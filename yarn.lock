@@ -7969,6 +7969,11 @@ react-icons@^5.3.0:
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-5.5.0.tgz#8aa25d3543ff84231685d3331164c00299cdfaf2"
   integrity sha512-MEFcXdkP3dLo8uumGI5xN3lDFNsRtrjbOEKDLD7yv76v4wpnEq2Lt2qeHaQOr34I/wPN3s3+N08WkQ+CW37Xiw==
 
+react-image-zooom@^1.5.5:
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/react-image-zooom/-/react-image-zooom-1.5.5.tgz#0c90f555c6dc07d4dec12edf7590f537a08e62e9"
+  integrity sha512-5KdVICYbA5q+bRx8e9vQaERPBgkWpYzsWnXJgPHCJhvjYOJrz4235Hbt0KpcHMWfIvpNfGhK8Q38g3rBOHZ5qQ==
+
 react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"

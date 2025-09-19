@@ -1,29 +1,61 @@
-import NextImage, { ImageProps as NextImageProps } from 'next/image';
-import { twMerge } from 'tailwind-merge';
+import React from "react";
+import NextImage, { ImageProps as NextImageProps } from "next/image";
+import { twMerge } from "tailwind-merge";
+import ImageZoom from "react-image-zooom";
 
-import { ImageFieldsFragment } from '@src/lib/__generated/sdk';
+import { ImageFieldsFragment } from "@src/lib/__generated/sdk";
 
-interface ImageProps extends Omit<ImageFieldsFragment, '__typename'> {
-  nextImageProps?: Omit<NextImageProps, 'src' | 'alt'>;
+interface ImageProps extends Omit<ImageFieldsFragment, "__typename"> {
+  nextImageProps?: Omit<NextImageProps, "src" | "alt">;
+  isZoom?: boolean;
 }
 
-export const CtfImage = ({ url, width, height, title, nextImageProps }: ImageProps) => {
+export const CtfImage = ({
+  url,
+  width,
+  height,
+  title,
+  nextImageProps,
+  isZoom,
+}: ImageProps) => {
   if (!url || !width || !height) return null;
 
   const blurURL = new URL(url);
-  blurURL.searchParams.set('w', '10');
-
+  blurURL.searchParams.set("w", "10");
+  if (!isZoom) {
+    return (
+      <NextImage
+        src={url}
+        width={width}
+        height={height}
+        alt={title || ""}
+        sizes="(max-width: 1200px) 100vw, 50vw"
+        placeholder="blur"
+        blurDataURL={blurURL.toString()}
+        {...nextImageProps}
+        className={twMerge(nextImageProps?.className, "transition-all")}
+      />
+    );
+  }
   return (
-    <NextImage
+    //@ts-ignore
+    <ImageZoom
       src={url}
-      width={width}
-      height={height}
-      alt={title || ''}
-      sizes="(max-width: 1200px) 100vw, 50vw"
-      placeholder="blur"
-      blurDataURL={blurURL.toString()}
-      {...nextImageProps}
-      className={twMerge(nextImageProps?.className, 'transition-all')}
-    />
+      alt={title || ""}
+      zoom="200%"
+      className={twMerge(nextImageProps?.className, "transition-all")}
+    >
+      <NextImage
+        src={url}
+        width={width}
+        height={height}
+        alt={title || ""}
+        sizes="(max-width: 1200px) 100vw, 50vw"
+        placeholder="blur"
+        blurDataURL={blurURL.toString()}
+        {...nextImageProps}
+        className={twMerge(nextImageProps?.className, "transition-all")}
+      />
+    </ImageZoom>
   );
 };
