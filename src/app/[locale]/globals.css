@@ -44,6 +44,7 @@
   --port-secondary: #1d4ed8;
   --port-dark-primary: #1d4ed8;
   --port-black-primary: #FFFFFE;
+  --heading: #ffff;
 }
 
 /* Explicit light theme */
@@ -78,6 +79,24 @@
   --port-secondary: #ffffff29;
   --port-dark-primary: #0a2777;
   --port-black-primary: #ffffff;
+  --heading: #000;
+  --tw-prose-headings: #e5e7eb;
+  [data-contentful-field-id="content"] {
+    p {
+        color: rgb(213 225 251);
+    }
+  }
+  .hero-section {
+    h1 {
+      color: black;
+    }
+  }
+  
+  /* [data-contentful-field-id="shortDescription"] {
+    p {
+      color: rgb(27 39 58 / var(--tw-text-opacity, 1));
+    }
+  } */
 }
 
 @media (prefers-color-scheme: dark) {

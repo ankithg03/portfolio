@@ -12,6 +12,7 @@ const colors = Object.entries(tokens).reduce((acc, [key, value]) => {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ["class", '[data-theme="dark"]'], // enable class AND data-theme
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
