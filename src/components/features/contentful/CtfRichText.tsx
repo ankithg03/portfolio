@@ -77,9 +77,41 @@ export const contentfulBaseRichTextOptions = ({
   },
   renderMark: {
     [MARKS.CODE]: (text) => (
-      <pre className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 p-3 rounded-md overflow-x-auto">
-        <code>{text}</code>
-      </pre>
+      <div className="relative group">
+        <button
+          type="button"
+          className="absolute top-2 right-2 z-10 opacity-70 group-hover:opacity-100 transition-opacity bg-gray-200 dark:bg-gray-700 text-xs px-2 py-1 rounded hover:bg-gray-300 dark:hover:bg-gray-600"
+          aria-label="Copy code"
+          onClick={async (e) => {
+            e.stopPropagation();
+            try {
+              await navigator.clipboard.writeText(String(text));
+              // Optionally, show a temporary "Copied!" message
+              const btn = e.currentTarget;
+              const original = btn.textContent;
+              btn.textContent = "Copied!";
+              setTimeout(() => {
+                btn.textContent = original;
+              }, 1200);
+            } catch {
+              // fallback or error handling
+            }
+          }}
+        >
+          Copy
+        </button>
+        <pre
+          className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 p-3 rounded-md overflow-x-auto"
+          tabIndex={0}
+          style={{
+            userSelect: "text",
+            WebkitUserSelect: "text",
+            MozUserSelect: "text",
+          }}
+        >
+          <code className="whitespace-pre-wrap">{text}</code>
+        </pre>
+      </div>
     ),
   },
 });
